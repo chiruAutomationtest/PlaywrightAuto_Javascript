@@ -1,0 +1,56 @@
+https://www.youtube.com/watch?v=taSFj5Zl8Wo&list=PLFGoYjJG_fqr7yasBnYh8kekFQuwlQJxX
+
+status codes:
+1XX - intermediat 
+2XX - success
+200 -ok : the request is success and info. return with response
+
+201 - created : the request has been fulfilled and created a new resource/user/account in side database {POST}
+
+202 -Accepted : the request is accepted for processing but server might take time to response or send other response
+
+204 - no content : when we want to delete the existing record using {delete} method
+
+3XX - redirection calls
+
+301 - moved permanently : this app. is not avaliable in this http://www.abc.com/ent/ and it moved to other domain http://www.adcd.com/ent/
+                             
+	when req is hit from client and from response provide a list new URI"S to redirect this URI
+	here we manually select new URI from Response Payload and redirct to new URI
+	
+302 - found : here redirect URI are Available that are under temporarily is at some different URI upto few of days and later it might be having new URI  
+
+304 - not Modified : here client has perfomed a conditional get request and access is allowed but document is not modified since from Begining/ after insert data ,
+                     here Cache Memory is Used insted of DATABASE server
+
+307 - Temporary Redirect :  when client access old URL or Existing uri it redirct to new URI automatically with out manual intervension
+
+4xx- Client Error
+
+400- bad request : , is missing, Syntex URL ,wrong JSON data mistake happen from client side
+
+401 -un-authorizatin : when token expired , invalid user ,wrong email id, expired token , missing token ,Untentication failed	
+
+404 - not found : data  not found in DB ,when we expecting from response which is not avaliable	ex : using GET call URI is not have valid USER /account
+
+405 - Method Not Found : usingpost insted of GET call
+	
+403 - forbidden  : user is valid but having restriction to access a resoruce / not have permission / un-authorization ex: modify admin /salary 
+
+5xx- Server Error
+500 -inter server error : server is encounter with unexpected condition
+
+501 - not implemented : resoruce is not implemented at server
+
+502 - bad gateway : when proxy req access gw or resource/user/account
+
+503 - service unavailable : here serever is currently unable to handle  the req  due to temporarily overloading / maintainance the server
+
+
+
+ 	
+
+
+
+
+
